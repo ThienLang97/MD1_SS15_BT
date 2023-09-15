@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let nums = prompt("Nhập nhiều số");
+        let numb = nums.split(",");
+        let newnum = numb.join("");
+        // console.log(newnum);
+        // console.log(numb);
+        let target = prompt("Nhập số target");
+        let check = false
+        for (let i = 0; i < numb.length; i++) {
+            for (let j = 0; j < numb.length; j++) {
+                if (i != j) {
+                    let newtar = target - Number(newnum[i]);
+                    let indexI = numb.indexOf(newnum[i]);
+                    let indexJ = numb.indexOf(newnum[j]);
+                    if (newtar === Number(newnum[j])) {
+                        console.log("Vị trí của i là", indexI);
+                        console.log("Vị trí của j là", indexJ);
+                        check = true;
+                    }
+                }
+            }
+            if (check) {
+                break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

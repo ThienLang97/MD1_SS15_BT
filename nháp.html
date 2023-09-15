@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[];
+        let newarr=[];
+        
+        let max = 0;
+        for (let i = 0; i<3; i++) {
+            let n = prompt("Nhập số");
+            let m = +n
+            if (Number.isInteger(m)) {
+             arr.push(m);
+             newarr= arr.map(String)
+             
+            } else {
+                alert("nhập lại");
+                i--
+            }
+        }
+        console.log(newarr);
+         newarr = newarr.map(Number)
+            for (let j=0; j<newarr.length; j++) {
+               if (newarr[j] > max) {
+                   max = newarr[j];
+                }
+            }
+            console.log("Số lớn nhất là", max);
+        
+        
+    </script>
+</body>
+</html>
